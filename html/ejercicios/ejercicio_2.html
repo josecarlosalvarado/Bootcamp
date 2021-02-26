@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio_2</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>informacion personal</legend>
+
+            <br>
+            
+            <label for="nombreinput">nombre:</label>
+            <input type="text" name="nombre" id="nombreinput" placeholder="introduce tu nombre">
+            <label for="textinput">Apellido:</label>
+            <input type="text" name="email" id="textinput" placeholder="introduce tu apellido">
+
+            <br><br>
+
+            <label for="edadinpurt">Edad:</label>
+            <input type="number" number="edad" id="edadinpurt" min="0" max="100">
+
+            <br><br>
+
+            <label for="emailinput">Email:</label>
+            <input type="email" number="email" id="emailinput" placeholder="introduce tu email">
+
+            <br><br>
+
+            <label for="pwd">contraseña:</label>
+            <input type="password" nombre="contraseña" id="pwd" placeholder="************">
+
+            <br><br>
+
+            <fieldset>
+                <legend>Genero:</legend>
+                <div>
+                    <input type="radio" name="civilstate" id="mariedinput">
+                    <label for="mariedinput">casado</label>
+                </div>
+                <div>
+                    <input type="radio" name="civilstate" id="singlestate">
+                    <label for="singlestate">soltero</label>
+                </div>
+                <div>
+                    <input type="radio" name="civilstate" id="divordecstate">
+                    <label for="divordecstate">divorciado</label>
+                </div>
+            </fieldset>
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+            <div>
+                <legend>informacion general:</legend>
+
+                <br>
+
+                <label for="paisinput">pais:</label>
+                <input type="text" id="paisinput" nombre="pais" list="paislists" placeholder="introduce tu pais">
+                <datalist id="paislists">
+                    <option value="España">España</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                </datalist>
+            </div>
+
+            <br><br>
+
+            <div>
+                <label for="lenguajeinput">lenguaje de programacion:</label>
+                <select name="lenhuaje" id="lenguajeinput">
+                    <option value="" hidden></option>
+                    <option value="java">java</option>
+                    <option value="python">python</option>
+                    <option value="html5">html5</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <fieldset>
+                <legend>academia de programacion favorita</legend>
+                <div>
+                    <input type="radio" name="academia" id="academiainput" checked>
+                    <label for="academiainput">code space academy</label>
+                </div>
+                <div>
+                    <input type="radio" name="academia" id="academiainput2">
+                    <label for="academiainput2">academia 2</label>
+                </div>
+                <div>
+                    <input type="radio" name="academia" id="academiainput3">
+                    <label for="academiainput3">academia 3</label>
+                </div>
+            </fieldset>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <input type="checkbox" number="check" id="checkinput">
+            <label for="checkinpput">acepto recibir cientos de miles de correos</label>
+        </div>
+       
+        <br>
+
+        <div> 
+            <input type="checkbox" number="check2" id="checkinput2">
+            <label for="checkinpput2">acepto los terminos y coindiciones</label>
+        </div>
+
+       <br>
+       <button type="submit">enviar</button>
+       <button type="reset">vaciar formulario</button>
+    </form>
+</body>
+
+</html>
