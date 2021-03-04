@@ -1,0 +1,22 @@
+/* tipos de display: none, inline, block, inline-block */
+
+[class^="box"] {
+    background-color: steelblue;
+}
+
+.box-0 {
+    display: none;
+}
+.box-4 {
+    display: inline;
+}
+.box-5 p {
+    display: inline;
+}
+.box-6 p {
+    display: inline;
+}
+
+.box-1, .box-2 {
+    display: inline-block;
+}
