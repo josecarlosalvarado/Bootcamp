@@ -1,0 +1,19 @@
+.caja {
+    background-color: gray;
+    height: 50px;
+    width: 270px;
+}
+
+
+.enlace-1 {
+    float: left;
+    margin-right: 100px;
+    
+}
+.enlace-2 {
+    float: right;
+}
+
+.enlace-1, .enlace-2 {
+    margin-top: 5%;
+}

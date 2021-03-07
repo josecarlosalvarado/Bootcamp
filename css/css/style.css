@@ -1,7 +1,7 @@
 /* tipos de display: none, inline, block, inline-block */
 
 [class^="box"] {
-    /* background-color: steelblue; */
+    background-color: steelblue;
 }
 
 .box-0 {
@@ -110,12 +110,7 @@
     width: 33.3%;
     float: left;
 }
-.post-float-child-3 {
-    background-color: royalblue;
-    height: 100px;
-    width: 33.3%;
-    float: right;
-}
+
 
 [class^="overflow-parent"] {
     width: 200px;
