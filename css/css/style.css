@@ -1,8 +1,8 @@
 /* tipos de display: none, inline, block, inline-block */
 
-[class^="box"] {
-    background-color: steelblue;
-}
+/* [class^="box"] {
+    /* background-color: steelblue; */
+/* } */ 
 
 .box-0 {
     display: none;
@@ -110,7 +110,12 @@
     width: 33.3%;
     float: left;
 }
-
+.post-float-child-3 {
+    background-color: royalblue;
+    height: 100px;
+    width: 33.3%;
+    float: right;
+}
 
 [class^="overflow-parent"] {
     width: 200px;
@@ -144,9 +149,30 @@
     border: 10px solid darkolivegreen;
 }
 
+
+/* el box-sizing: border-box lo utilizamos para que se mantenga el contenido dentro del borde */
 .border-box {
     margin-top: 10px;
     box-sizing: border-box;
 }
 
+/* escritorio */
+.responsive {
+    height: 100px;
+    background-color: aqua;
+    width: 30%;
+}
+/* tablet */
+@media only screen and (max-width: 920px) {
+    .responsive {
+        width: 50%;
+        
+    }
+}
 
+/* mobile */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 100%;
+    }
+}

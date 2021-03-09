@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+}
+
+.container {
+    padding: 12px 10%;
+    
+}
+
+.contenedor-superior {
+    background-color: coral;
+}
+.contenedor-superior h1 {
+    color: white;
+}
+.navbar {
+    background-color:rgb(41, 41, 41);
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+
+.imagen {
+    background-image: url(/imagenes/arbol.jpeg);
+    height: 400px;
+    background-position: center right;
+}
+
+.imagen p {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    position: absolute;
+    left: 13%;
+    margin-top: 80px;
+    line-height: 1.6em;
+
+}
+
+
+.contenedor-central {
+    background-color: rgb(233, 231, 231);
+}
+
+
+.contenedor-hijo-1 {
+    float: left;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.contenedor-hijo-2 {
+    background-color: rgb(46, 45, 45);
+    color: white;
+    width: 200px;
+    margin-top: 5%;
+    margin-right: 10%;
+    float: right;
+    padding: 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    padding: 20px;
+    background-color: rgb(46, 45, 45);
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+/* media querie de jesus */
+
+@media only screen and (max-width:768px) {
+    .main-section, aside {
+        float: none;
+        width: 100%;
+
+    }
+
+    .Welcome {
+        margin-bottom: 30px;
+    }
+
+    .img.header h1 {
+        font-size: 3em;
+        line-height: 1.3em;
+        margin: 20px 5px;
+    }
+    .navbar li {
+        display: block;
+        margin-top: 15px;
+    }
+}
