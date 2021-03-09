@@ -1,106 +1,100 @@
-* {
-    margin: 0px;
+body{
+	background-color:#f4f4f4;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+	margin:0;
+	color:#fff;
 }
 
-.container {
-    padding: 12px 10%;
-    
+.container{
+	width:80%;
+	margin:auto;
+	overflow:hidden;
 }
 
-.contenedor-superior {
-    background-color: coral;
-}
-.contenedor-superior h1 {
-    color: white;
-}
-.navbar {
-    background-color:rgb(41, 41, 41);
-}
-.navbar ul {
-    list-style: none;
-    padding: 0;
-}
-.navbar li {
-    display: inline;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding-right: 15px;
+#main-header{
+	background-color:coral;
 }
 
-
-.imagen {
-    background-image: url(/imagenes/arbol.jpeg);
-    height: 400px;
-    background-position: center right;
+#navbar{
+	background-color:#333;
 }
 
-.imagen p {
-    color: white;
-    text-align: center;
-    font-size: 3em;
-    position: absolute;
-    left: 13%;
-    margin-top: 80px;
-    line-height: 1.6em;
-
+#navbar ul{
+	padding:0;
+	list-style: none;
 }
 
-
-.contenedor-central {
-    background-color: rgb(233, 231, 231);
+#navbar li{
+	display:inline;
 }
 
-
-.contenedor-hijo-1 {
-    float: left;
-    padding-top: 5%;
-    padding-left: 10%;
+#navbar a{
+	color:#fff;
+	text-decoration: none;
+	font-size:18px;
+	padding-right:15px;
 }
 
-.contenedor-hijo-2 {
-    background-color: rgb(46, 45, 45);
-    color: white;
-    width: 200px;
-    margin-top: 5%;
-    margin-right: 10%;
-    float: right;
-    padding: 20px;
+#header{
+	background-image:url('../images/header.jpg');
+	background-position:center right;
+	margin-bottom:30px;
+	text-align: center;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0px;
-    color: white;
-    padding: 20px;
-    background-color: rgb(46, 45, 45);
-    clear: both;
-    width: 100%;
-    text-align: center;
+#header h1{
+	font-size:3em;
+	line-height: 1.6em;
+	margin: 70px;
 }
 
-/* media querie de jesus */
+#main{
+	float:left;
+	width:70%;
+	padding-right: 50px;
+	box-sizing: border-box;
+	color:#555;
+}
 
-@media only screen and (max-width:768px) {
-    .main-section, aside {
-        float: none;
-        width: 100%;
+#sidebar{
+	float:right;
+	width:30%;
+	background: #333;
+	padding:10px;
+	box-sizing: border-box;
+}
 
-    }
+#main-footer{
+	background: #333;
+	text-align: center;
+	padding:20px;
+	margin-top:40px;
+}
 
-    .Welcome {
-        margin-bottom: 30px;
-    }
+@media(max-width:600px){
 
-    .img.header h1 {
-        font-size: 3em;
-        line-height: 1.3em;
-        margin: 20px 5px;
-    }
-    .navbar li {
-        display: block;
-        margin-top: 15px;
-    }
+	#header h1{
+		font-size:2.5em;
+		margin: 70px 20px;
+	}
+	
+	#navbar li {
+		display: block;
+		margin-bottom:20px;
+		width: 50%;
+	}
+
+	#main{
+		width:100%;
+		float:none;
+		padding-right: 0px;
+		margin-bottom: 40px;
+	}
+
+	#sidebar{
+		width:100%;
+		float:none;
+	}
 }
