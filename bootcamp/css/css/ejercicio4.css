@@ -1,0 +1,106 @@
+.nav {
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.logotipo {
+    margin-left: 5px;
+    float: left;
+
+}
+   
+
+.form {
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.nav-margin {
+    margin-top: 2px;
+}
+
+.aside {
+    width: 150px;
+    height: 550px;
+}
+
+.parrafo {
+    font-size: x-small;
+}
+
+.div {
+    margin-left: 170px;
+    height: 500px;
+    margin-top: -553px;
+}
+.div h1 {
+    margin-left: 5px;
+}
+
+.div img {
+    margin-left: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+.imagen-texto p {
+    position: relative;
+
+    margin-top: -70px;
+    left: 80px;
+    font-size: small;
+    /* overflow:  ; */
+}
+
+.hijo-1 {
+    position: absolute;
+    width: 450px;
+    height: 485px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.hijo-2 {
+    position: absolute;
+    left: 642px;
+    width: 130px;
+    height: 400px;
+    margin-top: 5px;
+}
+
+.texto {
+    font-size:small;
+}
+
+.aside-derecha {
+    
+    font-size:15px;
+    margin-bottom: 5px;
+}
+
+.hijo-2 p {
+    font-size: 13px;
+}
+
+
+.aside-derecha-2 {
+    font-size:15px;
+    margin-bottom: 5px;
+}
+
+
+.footer {
+    margin-top: 60px;
+    overflow: hidden;
+}
+footer a {
+    margin-top: 15px;
+    margin-right: 3px;
+    float: left;
+}
+
+.footer p {
+    float: right;
+}
+

@@ -1,0 +1,210 @@
+/* tipos de display: none, inline, block, inline-block */
+
+/* [class^="box"] {
+    /* background-color: steelblue; */
+/* } */ 
+
+.box-0 {
+    display: none;
+}
+.box-4 {
+    display: inline;
+}
+.box-5 p {
+    display: inline;
+}
+.box-6 p {
+    display: inline;
+}
+
+.box-1, .box-2 {
+    display: inline-block;
+}
+
+.renctangle {
+    background-color: teal;
+    height: 50px;
+    width: 25%;
+}
+
+/* posicion relativa  */
+
+.relativo {
+    position:relative;
+    left: 150px;
+    top: -57px;
+    z-index: -1;
+
+}
+
+/* posicion absoluta */
+
+.pos-absoluta-parent {
+    height: 300px;
+    border: 15px solid tomato;
+    position: relative;
+    
+}
+
+
+.pos-absolute-child {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+
+    
+}
+
+.pos-fixed {
+    background-color: grey;
+    padding: 20px 30px;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+}
+
+.pos-fixed a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* posicion sticky */
+
+.pos-sticky {
+    background-color: steelblue;
+    padding: 15px 25px;
+
+    position: sticky;
+    top:0;
+}
+
+.pos-sticky a {
+    text-decoration: none;
+    color: white;
+}
+
+/* posicionamiento flotante  */
+
+.pos-float-parent {
+    border: 5px solid orange;
+
+    overflow: hidden;
+}
+
+.post-float-child-1 {
+    background-color: orchid;
+    height: 100px;
+    width: 33.3%;
+
+    float: right;
+}
+.post-float-child-2 {
+    background-color: peru;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+.post-float-child-3 {
+    background-color: royalblue;
+    height: 100px;
+    width: 33.3%;
+    float: right;
+}
+
+[class^="overflow-parent"] {
+    width: 200px;
+    height: 100px;
+    border: 3px dashed black;
+    margin-bottom: 150px;
+}
+
+.overflow-parent-1 {
+    overflow: hidden;
+}
+
+.overflow-parent-2 {
+    overflow: visible;
+}
+
+.overflow-parent-3 {
+    overflow: scroll;
+}
+
+.box-sizing-parent {
+    width: 200px;
+    height: 200px;
+    border: 10px solid goldenrod;
+}
+
+.box-sizing-child {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    border: 10px solid darkolivegreen;
+}
+
+
+/* el box-sizing: border-box lo utilizamos para que se mantenga el contenido dentro del borde */
+.border-box {
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* escritorio */
+.responsive {
+    height: 100px;
+    background-color: aqua;
+    width: 30%;
+}
+/* tablet */
+@media only screen and (max-width: 920px) {
+    .responsive {
+        width: 50%;
+        
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+
+/* flexbox */
+
+.flex-parent {
+    display: flex;
+    height: 250px;
+    /* flex-wrap: wrap; */
+     flex-flow: row wrap; /*atajo que combina ambas propiedades */
+     justify-content: center;
+
+}
+[Class^="flex-child"] {
+    width: 250px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-parent > div:nth-child(odd) {
+    background-color: #ddd;
+    color: #333;
+}
+.flex-parent > div:nth-child(even) {
+    background-color:#333;
+    color: #ddd;
+}
