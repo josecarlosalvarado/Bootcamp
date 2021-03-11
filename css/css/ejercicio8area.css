@@ -1,0 +1,41 @@
+[class^="grid-child"] {
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid-parent {
+    display: grid;
+    gap: 10px;
+    
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+    grid-template-areas: "nav nav" 
+                         "aside1 aside2"
+                         "aside1 aside3"
+                         "footer footer";
+
+}
+
+.grid-child-1 {
+    grid-area: nav;
+    background-color: rgb(86, 189, 253);
+}
+.grid-child-2 {
+    grid-area: aside1;
+    background-color: rgb(141, 49, 247);
+}
+
+.grid-child-3 {
+    grid-area: aside3;
+    background-color: rgb(13, 24, 62);
+}
+.grid-child-4 {
+    grid-area: aside2;
+    background-color: rgb(149, 213, 254);
+}
+.grid-child-5 {
+    grid-area: footer;
+    background-color: rgb(250, 228, 139);
+}
