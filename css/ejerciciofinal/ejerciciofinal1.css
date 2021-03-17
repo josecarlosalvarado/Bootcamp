@@ -5,7 +5,7 @@ body {
 
 .grid-parent {
     display: grid;
-    grid-template-columns: 250px 4fr;
+    grid-template-columns: 250px 3fr;
     grid-template-rows: 1fr 4fr 10fr 208px;
 }
 
@@ -21,21 +21,178 @@ body {
     grid-row: 2/5;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     
 }
 
 .div-3 {
-    background-color: rgb(219, 218, 218);
+    background-color: #f4f5f7;
     grid-column: 2/3;
     grid-row: 2/4;
     margin-top: 5px;
     display: flex;
+    justify-content: start;
+    flex-direction: column;
+    
+    padding: 20px;
+}
+
+
+.div-3 > h2 {
+    font-size: 2em;
+    display: block;
+    margin-left: 15%;
+}
+
+.boton-central {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-padre {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+   
+
+}
+
+.grid-hijo-1 {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: white;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 10px;
+}
+.grid-hijo-2 {
+    width: 300px;
+    height: 100px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    background-color: white;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 10px;
 }
+
+
+.grid-hijo-3 {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 10px;
+}
+
+.grid-hijo-4 {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 10px;
+}
+
+.circulo {
+    background-color: orange;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/*
+.circulo-1 {
+    position: absolute;
+    left: 1130px;
+    background-color: #0e9f6e;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.circulo-2 {
+    position: absolute;
+    right: 900px;
+    background-color: #e1effe;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.5;
+} */
+
+
+ .grid-hijo-1, .titulo-card {
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+/*
+.grid-hijo-2, .titulo-card-1 {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    color: gray;
+    font-size: 1.1em;
+}
+
+
+.grid-hijo-3, .titulo-card-2 {
+    margin-bottom: 3px;
+    margin-right: 25px;
+    color: gray;
+    font-size: 1.1em;
+}
+
+
+.num {
+    color: black;
+    margin-right: 161px;
+    
+}
+
+.grid-hijo-2, .num-1 {
+    color: black;
+    margin-right: 30px;
+}
+
+.grid-hijo-3, .num-2 {
+    color: black;
+    margin-right: 70px;
+} */
+
+
+.boton-central button {
+    height: 50px;
+    width: 2200px;
+    padding: 10px;
+    background-color: #7e3af2 ;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: start;
+    
+}
+
+
 
 .titulo{
     display: flex;
@@ -51,8 +208,6 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    
-    
 }
 
 
@@ -81,10 +236,30 @@ body {
     font-size: 1.6em;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
-    
-
+    justify-content: center;
+    margin-left: 10px;
 }
+
+.li-1 {
+    margin-bottom: 10px;
+}
+.li-2 {
+    margin-bottom: 10px;
+}
+.li-3 {
+    margin-bottom: 10px;
+}
+.li-4 {
+    margin-bottom: 10px;
+}
+.li-5 {
+    margin-bottom: 10px;
+}
+.li-6 {
+    margin-bottom: 10px;
+}
+
+
 
 .lista-aside, .li-1 {
     list-style-image: url(/ejerciciofinal/casa.png);
@@ -107,14 +282,15 @@ body {
 }
 
 
-.lista-aside > li:hover {
-    
-}
-
-
 .boton-aside {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100px
-    ;
+    position: absolute;
+    top: 350px;
+    left: 1%;
+    margin-top: 15px;
+    width: 200px;
+    background-color: #6c2bd9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
 }
