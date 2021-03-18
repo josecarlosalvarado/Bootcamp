@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuleta javascript</title>
+    <style>
+        a {
+            font-size: 3em;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>procesando javascript</h1>
+
+    <a href="#" onclick="console.log('hola desde un script inline')">inline script</a>
+    <a href="#">internal script</a>
+    <a href="#">external script</a>
+
+
+
+    <script>
+        /*enlace interno*/
+       function saludo () {
+           alert("hola desde un script interno");
+           console.log("has hecho click");
+       }
+        document.getElementsByTagName("a").item(1).addEventListener("click", saludo);
+    </script>
+
+    <!-- script externo -->
+    <script src="js/main.js"></script>
+</body>
+</html>
