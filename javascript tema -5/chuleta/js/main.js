@@ -7,7 +7,7 @@ function saludo_dos() {
 
 }
 
-document.getElementsByTagName("a").item(2).addEventListener("click", saludo_dos);
+// document.getElementsByTagName("a").item(2).addEventListener("click", saludo_dos);
 
 // ------------------------depuracion / logging------------------------
 
@@ -146,4 +146,127 @@ console.log(person[propertyName]);
 person.children = ["marta", "javier"];
 console.log(person);
 console.log(person.children[1]);
+
+
+// this
+
+const person2 = {
+    name: "thomas",
+    talk() {
+        console.log(this);
+        console.log(`me llamo ${this.name}`);
+    }
+}
+
+
+const person3 = {
+    name: "sarah",
+    talk() {
+        console.log(this);
+        console.log(`me llamo ${this.name}`);
+    }
+}
+
+person2.talk();
+person3.talk();
+person2.talk(this);
+
+
+console.clear();
+//------------------------arrays------------------------
+
+let selectedColors = ["red", "blue"]; //array de strings
+console.log(selectedColors, typeof selectedColors);
+
+selectedColors[2] = "green";
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.push("violet","white"); //añade elemento en la array
+console.log(selectedColors, selectedColors.length);
+
+selectedColors.pop(); //borra el ultimo elemento
+console.log(selectedColors,selectedColors.length);
+
+selectedColors.unshift("white");
+console.log(selectedColors,selectedColors.length);
+
+selectedColors.shift(); //borra el primer elemento
+console.log(selectedColors,selectedColors.length);
+
+selectedColors.sort();
+console.log(selectedColors, selectedColors.length);
+
+
+console.log(selectedColors.indexOf("red"));
+
+console.log("El rojo esta en el indice", selectedColors.indexOf("red"));
+
+console.log(selectedColors.slice(1,3));
+console.log(selectedColors);
+
+
+console.log("los elementos borrados son", selectedColors.splice(1,1)); //para eliminar un elemento
+console.log("la array se ha quedado asi",selectedColors);
+
+
+console.clear();
+/*
+    crear un objeto que tenga las propiedades nombre, altura, género y 
+    amigos estara vacio y los añadiremos posteriormente
+    3 elementos con los monbres, depues, añadiremos uno al inicio.
+*/
+
+const child = {
+    name: "carlos",
+    age: 18,
+    height: 1.80,
+    gender: "male",
+    friends: [],
+    perderAmigo() {
+        this.friends.pop();
+    }
+}
+
+child.friends = ["javier", "kike", "paula"];
+
+child.friends.unshift("carla");
+console.log(child);
+
+child.perderAmigo();
+console.log(child);
+
+console.log();
+//------------------------condicionales------------------------
+const randomNumber = 9;
+const guessedNumber = "5";
+
+if (typeof randomNumber === typeof guessedNumber) {
+    console.log("hey, tienes  que introducir el mismo tipo");
+}
+
+
+
+if (randomNumber === guessedNumber) {
+    console.log("has acertado el número");
+}else if (randomNumber > guessedNumber) {
+    console.log("El numero secreto es mayor");
+}else {
+    console.log("El numero secreto es menor");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
