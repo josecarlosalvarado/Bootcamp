@@ -152,11 +152,17 @@ console.log(person.children[1]);
 
 const person2 = {
     name: "thomas",
+    age: 30,
+    blonde: false,
     talk() {
         console.log(this);
         console.log(`me llamo ${this.name}`);
+    },
+    presentarse() {
+        console.log(`me llamo ${this.name},tengo ${this.age} años y${this.blonde ? ` soy rubio` : `soy moreno`} `);
     }
 }
+person2.presentarse();
 
 
 const person3 = {
@@ -225,6 +231,7 @@ const child = {
     perderAmigo() {
         this.friends.pop();
     }
+
 }
 
 child.friends = ["javier", "kike", "paula"];
@@ -244,8 +251,6 @@ if (typeof randomNumber === typeof guessedNumber) {
     console.log("hey, tienes  que introducir el mismo tipo");
 }
 
-
-
 if (randomNumber === guessedNumber) {
     console.log("has acertado el número");
 }else if (randomNumber > guessedNumber) {
@@ -254,19 +259,138 @@ if (randomNumber === guessedNumber) {
     console.log("El numero secreto es menor");
 }
 
+console.clear();
+// Ternary Operator
+
+let variable = 12 < 10 ? "El primero es menor" : " El primero es mayor"
+console.log(variable);
+
+console.clear();
+// Switch
+
+let option = 5;
+switch (option) {
+    case 1:
+        //bloque de codigo para valor 1 
+        console.log("Option vale 1");
+        break;
+    case 2:
+        //bloque de codigo para valor 2
+        console.log("Option vale 2");
+        break;
+    case 3:
+        //bloque de codigo para valor 3
+        console.log("Option vale 3");
+        break;
+    default: // "De otro modo" de pseint
+        console.log("Otra opción");
+        break;
+}
 
 
+console.clear();
+// funciones / functions
+
+//Nombradas
+function greet(name, lastName) {
+   return `hola,${name} ${lastName}. ¿Qué tal?`;
+}
+
+console.log(greet(" Marcos", "aurelio"));
+// greet("Marcos", "Aurelio");
+
+//que devuelva el cuadrado de un numero
+
+function cuadrado(num1) {
+    return num1 * num1;
+}
+console.log(cuadrado(5));
+
+//Anónimas 
+// let numberArray = [5, 51, 1, 15, 2];
+// console.log(numberArray);
+// numberArray.sort(); // me lo ordena segun ASCII
+// console.log(numberArray);
 
 
+// function orderNumbers (a, b) {  // Funcion nombrada
+//     if (a < b) {
+//         return -1;
+//     } else if (a === b) {
+//         return 0;
+//     } else  {
+//         return 1;
+//     }
+
+// }
+
+// numberArray.sort(orderNumbers);
 
 
+// numberArray.sort(function(a, b) {
+//     if (a < b) {
+//         return -1;
+//     } else if (a === b) {
+//         return 0;
+//     } else {
+//         return 1;
+//     }
+// });
+
+// numberArray.sort(function (a, b) {return a-b})
 
 
+// console.log( "Funcion anónima",numberArray);
 
+console.clear();
+// Arrow functions / funciones de flecha
 
+const perimeterOfSquare = (side) => 4*side;
 
+// const perimeterOfSquare = function (side) {  // esta no es de flecha (funcion)
+//     return side * 4;
+// }
 
+console.log(perimeterOfSquare(5));
 
+console.log(typeof function() {});
+console.log(typeof (() => {}));
 
+console.clear();
+// pasar la funcion que ordena los numeros a una funcion de flecha
 
+let numberArray = [5, 51, 1, 15, 2];
 
+numberArray.sort((a, b) => a - b)
+console.log( "Funcion de flecha",numberArray);
+
+let cuadradoNumero = (num5) => num5 * num5;
+console.log(cuadradoNumero(5));
+
+console.clear();
+//------------------------for------------------------
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`ìndice: ${i}`);
+}
+
+// definir y rellenar una array con el indice i 
+const arrayFuncion = []
+
+for (let i = 0; i <= 10; i++) {
+    arrayFuncion.push(i * i)
+}
+
+console.log(arrayFuncion);
+
+console.clear()
+// while 
+
+console.clear;
+// foreach 
+
+console.log(numberArray);
+
+numberArray.forEach(function(item) {
+    console.log(item);
+});
