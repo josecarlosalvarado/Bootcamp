@@ -9,6 +9,29 @@
             font-size: 1.6em;
             display: block;
         }
+
+        .grandparent {
+            height: 500px;
+            background-color: brown;
+        }
+
+        .grandparent, .grandparent div {
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: flex;
+            gap: 25px;
+            flex-grow: 1;
+            padding: 25px;
+        }
+
+        .parent {
+            background-color: cyan;
+        }
+
+        .child {
+            background-color: rgb(241, 234, 134);
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -18,6 +41,23 @@
     <a href="#" onclick="console.log('hola desde un script inline')">inline script</a>
     <a href="#">internal script</a>
     <a href="#">external script</a>
+
+
+    <h1>Acceso al DOM</h1>
+    <div class="grandparent" id="grandparent">
+
+        <div class="parent" id="parent-1">
+            <div class="child" id="child-1">child-1</div>
+            <div class="child" id="child-2">child-2</div>
+            
+        </div>
+
+        <div class="parent" id="parent-2">
+            <div class="child" id="child-1">child-3</div>
+            <div class="child" id="child-2">child-4</div>
+        </div>
+        
+    </div>
 
 
 
@@ -32,5 +72,6 @@
 
     <!-- script externo -->
     <script src="js/main.js"></script>
+    <script src="js/DOM.js"></script>
 </body>
 </html>

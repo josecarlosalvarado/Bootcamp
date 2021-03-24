@@ -7,7 +7,7 @@ function saludo_dos() {
 
 }
 
-// document.getElementsByTagName("a").item(2).addEventListener("click", saludo_dos);
+//  document.getElementsByTagName("a").item(2).addEventListener("click", saludo_dos);
 
 // ------------------------depuracion / logging------------------------
 
@@ -66,7 +66,7 @@ console.log(typeof num, typeof num2);
 
 let bool = Boolean(true);
 let bool2 = false; //recomendada 
-console.log(typeof bool, typeof bool2, typeof true, typeof "true" );
+console.log(typeof bool, typeof bool2, typeof true, typeof "true");
 
 let undef;
 console.log(undef, typeof undef);
@@ -78,7 +78,7 @@ console.log(selectedColor, typeof selectedColor);
 //objects
 array = Array(1, 2, 3);
 let array2 = [1, 2, 3];
-console.log(array,array2);
+console.log(array, array2);
 console.log(typeof array, typeof array2);
 
 console.log(typeof new Date("2021-05-12"));
@@ -87,7 +87,7 @@ console.log(typeof new Error("mensaje de error"));
 
 console.clear();
 //------------------------strings------------------------
-str  = "hola futuro";
+str = "hola futuro";
 console.log(str, str.length);
 console.log(str.indexOf("futuro"), str.indexOf("cadena no presentada"));
 console.log("la ultima ocurrencia de 'u' esta en el indice", str.lastIndexOf("u"));
@@ -187,17 +187,17 @@ console.log(selectedColors, typeof selectedColors);
 selectedColors[2] = "green";
 console.log(selectedColors, selectedColors.length);
 
-selectedColors.push("violet","white"); //añade elemento en la array
+selectedColors.push("violet", "white"); //añade elemento en la array
 console.log(selectedColors, selectedColors.length);
 
 selectedColors.pop(); //borra el ultimo elemento
-console.log(selectedColors,selectedColors.length);
+console.log(selectedColors, selectedColors.length);
 
 selectedColors.unshift("white");
-console.log(selectedColors,selectedColors.length);
+console.log(selectedColors, selectedColors.length);
 
 selectedColors.shift(); //borra el primer elemento
-console.log(selectedColors,selectedColors.length);
+console.log(selectedColors, selectedColors.length);
 
 selectedColors.sort();
 console.log(selectedColors, selectedColors.length);
@@ -207,12 +207,12 @@ console.log(selectedColors.indexOf("red"));
 
 console.log("El rojo esta en el indice", selectedColors.indexOf("red"));
 
-console.log(selectedColors.slice(1,3));
+console.log(selectedColors.slice(1, 3));
 console.log(selectedColors);
 
 
-console.log("los elementos borrados son", selectedColors.splice(1,1)); //para eliminar un elemento
-console.log("la array se ha quedado asi",selectedColors);
+console.log("los elementos borrados son", selectedColors.splice(1, 1)); //para eliminar un elemento
+console.log("la array se ha quedado asi", selectedColors);
 
 
 console.clear();
@@ -253,9 +253,9 @@ if (typeof randomNumber === typeof guessedNumber) {
 
 if (randomNumber === guessedNumber) {
     console.log("has acertado el número");
-}else if (randomNumber > guessedNumber) {
+} else if (randomNumber > guessedNumber) {
     console.log("El numero secreto es mayor");
-}else {
+} else {
     console.log("El numero secreto es menor");
 }
 
@@ -293,7 +293,7 @@ console.clear();
 
 //Nombradas
 function greet(name, lastName) {
-   return `hola,${name} ${lastName}. ¿Qué tal?`;
+    return `hola,${name} ${lastName}. ¿Qué tal?`;
 }
 
 console.log(greet(" Marcos", "aurelio"));
@@ -345,7 +345,7 @@ console.log(cuadrado(5));
 console.clear();
 // Arrow functions / funciones de flecha
 
-const perimeterOfSquare = (side) => 4*side;
+const perimeterOfSquare = (side) => 4 * side;
 
 // const perimeterOfSquare = function (side) {  // esta no es de flecha (funcion)
 //     return side * 4;
@@ -353,8 +353,8 @@ const perimeterOfSquare = (side) => 4*side;
 
 console.log(perimeterOfSquare(5));
 
-console.log(typeof function() {});
-console.log(typeof (() => {}));
+console.log(typeof function () { });
+console.log(typeof (() => { }));
 
 console.clear();
 // pasar la funcion que ordena los numeros a una funcion de flecha
@@ -362,7 +362,7 @@ console.clear();
 let numberArray = [5, 51, 1, 15, 2];
 
 numberArray.sort((a, b) => a - b)
-console.log( "Funcion de flecha",numberArray);
+console.log("Funcion de flecha", numberArray);
 
 let cuadradoNumero = (num5) => num5 * num5;
 console.log(cuadradoNumero(5));
@@ -391,6 +391,56 @@ console.clear;
 
 console.log(numberArray);
 
-numberArray.forEach(function(item) {
-    console.log(item);
+numberArray.forEach(function (value, index) {
+    console.log(value, index);
 });
+
+//----------------------------------------------------------------------------------
+
+// transformar la funcion de arriba a funcion de flecha
+
+numberArray.forEach((value, index) => (console.log(`indice ${index}: ${value}`)));
+
+let otherArray = [];
+
+numberArray.forEach(item => otherArray.push(item)); //rellenar una array item por item
+console.log(otherArray);
+
+console.clear();
+// for of
+
+for (let item of numberArray) {
+    console.log(item);
+}
+
+//continue
+
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue //saltar a la siguiente iteración 
+    }
+    console.log("usando el continue", i);
+
+}
+
+//Break
+
+let i = 0;
+let k;
+
+mainLoop: while (true) {
+    console.log("outer loop", i);
+    i++
+    k = 1;
+    while (true) {
+        console.log("inner loop", k);
+        k++;
+        if (i === 5 && k === 5) {
+            break mainLoop;
+        } else if (k === 5) {
+            break;
+        }
+    }
+}
+
+
