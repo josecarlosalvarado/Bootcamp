@@ -12,7 +12,7 @@
 
         .grandparent {
             height: 500px;
-            background-color: brown;
+            background-color: rgb(0, 255, 179);
         }
 
         .grandparent, .grandparent div {
@@ -32,6 +32,9 @@
             background-color: rgb(241, 234, 134);
             justify-content: center;
         }
+        .bg-red {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -46,8 +49,8 @@
     <h1>Acceso al DOM</h1>
     <div class="grandparent" id="grandparent">
 
-        <div class="parent" id="parent-1">
-            <div class="child" id="child-1">child-1</div>
+        <div class="parent bg-dark rounded d-flex" id="parent-1">
+            <div class="child" id="child-1"><span>child-1</span></div>
             <div class="child" id="child-2">child-2</div>
             
         </div>
