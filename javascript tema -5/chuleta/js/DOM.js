@@ -101,9 +101,77 @@ parent2.appendChild(table); //añadimos las variables al parent2
 
 // eventos
 
-Document.getElementById(id).onclick = function() {
+const colorButton = document.getElementsByTagName("button")[0];
+colorButton.addEventListener("click", function (event){
     
+    console.log(event);
+    console.log(event.target);
+    console.log(event.target.tagName);
+
+    if (event.ctrlKey) {
+        event.target.classList.toggle("button")
+        document.body.classList.toggle("bg-red");
+        
+    }
+
+    console.log(`x: ${event.clientX} | y: ${event.clientY}`);
+    console.log(`alt: ${event.altKey}, shift: ${event.shiftKey}, Ctrl: ${event.ctrlKey}`);
+    
+});
+
+const eventoemail = document.querySelector("#emailInput");
+eventoemail.addEventListener("focus", inputListener)
+eventoemail.addEventListener("blur", inputListener)
+
+function inputListener(e) {
+    console.log("tipo de evento:", e.type);
+    if (e.type === "focus") {
+        e.target.classList.add("bg-red");
+    }else if(e.type === "blur") {
+        e.target.classList.remove("bg-red");
+    }
 }
+
+const changeTitle = e => {
+    document.querySelectorAll("h1")[2].textContent = eventoemail.value; //propiedad value importante
+
+}
+
+eventoemail.addEventListener("keydown", inputListener)
+eventoemail.addEventListener("keyup", changeTitle)
+
+const container = document.getElementById("container");
+
+container.addEventListener("mouseover", inputListener)
+container.addEventListener("mouseout", inputListener)
+
+
+function coords(e) {
+    const h1 = document.querySelectorAll("h1")[3]
+    document.querySelectorAll("h1")[3].textContent = `x: ${e.clientX} | y: ${e.clientY}`;
+    // h1.style.marginLeft += 1;
+}
+
+document.body.addEventListener("mousemove", coords);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Array.from(family).forEach(item => console.log(item)); //construyo una array
