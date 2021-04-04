@@ -23,3 +23,15 @@ const changeImg = (e) => img.src = e.target.textContent;
 listItem[0].addEventListener("click", changeImg); 
 listItem[1].addEventListener("click", changeImg); 
 listItem[2].addEventListener("click", changeImg); 
+
+
+const eventoboton = document.querySelector("#InputBoton");
+
+const escribirParafo = e => {
+    document.querySelectorAll("p").textContent = eventoboton.value; 
+}
+
+
+eventoboton.addEventListener("keydown", inputListener)
+eventoboton.addEventListener("keyup", changeTitle)
+
