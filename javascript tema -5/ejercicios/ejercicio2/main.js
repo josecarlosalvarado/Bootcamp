@@ -3,12 +3,11 @@
 
 // definimos el array:
 
-let variable1 = [1,2,3,4,5];
+let variable1 = ["1","2","3","4","5"];
 
 // inicializamos la array:
 
 console.log(variable1);
-variable1;
 
 console.clear();
 // Define un array inicialmente vacío. Añade tres elementos de tipo number posteriormente. Elimina por
@@ -36,24 +35,26 @@ console.clear();
 // Escribe una función nombrada que devuelva true si el argumento dado es de tipo boolean y false en
 // caso contrario. 
 
-//sin terminar
+
 function funcionTipo(argumento) {
-    if (argumento.typeOf === Boolean) {
-        return true;
-    } 
+    return typeof argumento  === "boolean";
 
 }
-console.log(funcionTipo("hola"));
+console.log(funcionTipo(true));
+console.log(funcionTipo("true"));
+console.log(funcionTipo(2));
 
+console.clear();
 // Escribe una función que devuelva la longitud de un string recibido por argumento.
 
 //funcion que devuelve la longitud de una array
 function funcionStr(str) {
-     return str.length
+     return str.length;
 }
 
 console.log(funcionStr("hola que tal"));
 
+console.clear();
 // Crea una función de flecha que reciba una cantidad de minutos y lo devuelva convertido en segundos.
 
 //definimos lo segundos
@@ -92,7 +93,9 @@ console.log(funcionAños(17));
 console.clear();
 //Crea una función que reciba un array y devuelva su último elemento. Prueba tu función con varios arrays
 // de diferentes longitudes.
+const arrayLeght = (arrayLeght1) => arrayLeght1[arrayLeght1.length - 1];
 
+console.log(arrayLeght(arrayLeght1));
 
 
 //creamos una funcion que elimina el ultimo elemento de la funcion pero la pinta en la consola
@@ -107,11 +110,6 @@ console.clear();
 // Un granjero necesita contar la cantidad de patas de los animales en sus diferentes granjas muy
 // frecuentemente, pero tiene tres especies: pollos (2 patas), vacas (4 patas) y cerdos (4 patas). Tu función
 // recibirá la cantidad de animales en ese orden y devolverá la cantidad de patas totales. Ejemplo:
-
-//definimos el numero de patas de cada animal de la granja
-const numeroPatasPollos = 2;
-const numeropatasVacas = 4;
-const numeropatasCerdos = 2;
 
 //hacemos un funcion para calcular cuantas patas hay en total
 function numeroAnimales(pollos,vacas,cerdos,numero1,numero2,numero3,suma) {
@@ -144,7 +142,7 @@ console.clear();
 // palabra de la frase original. Investigar método existente de los strings para este fin.
 
 function funcionString(cadenaADividir,separador) {
-    var arrayDeCadenas = cadenaADividir.split(separador);
+    let arrayDeCadenas = cadenaADividir.split(separador);
    return arrayDeCadenas;
 
 }
@@ -157,8 +155,6 @@ console.clear();
 // Inicializa dos objetos, address1 y address2 con las propiedades: provincia, ciudad, municipio, código
 // postal, calle, número, planta, y número de puerta.
 
-
-
 function funcionAddress(address1,address2) {
     return address1,address2;
    
@@ -169,38 +165,33 @@ console.clear();
 // Los dominios en la web, se componen del nombre de dominio (codespaceacademy) y de un TLD (toplevel domain) como, por ejemplo .com / .es / .org, etc. Crea una función que se llame parseDomain() que
 // reciba por argumento un string y devuelva un objeto con dos propiedades: domain y tld. Ejemplo:
 
-// function parseDomain(string2,tld) {
-//     return 
-// }
+const parseDomain = function(x) {
+    let arrayParse = x.split(".");
+    Object = {
+        Domain: arrayParse[0],
+        TLD: arrayParse[1],
+    }
+    return Object;
+}
 
-// console.log("codespaceacademy",".com");
+console.log(parseDomain("goolge.es"));
 
 console.clear();
 // . Nos han prohibido el uso del operador de igualdad estricta (===), pero queremos poder seguir utilizando
 // dicha esa funcionalidad. Crea una función que devuelva true si dos números tienen el mismo valor y el
 // mismo tipo de dato. Debemos usar el operador lógico “&&”. Prueba tu función con dos estos inputs:
 
-function funcionEstricta(num11,num12) {
-    if(typeof(num11,num12) && num11 === num12){
-        return true;
-    } else {
-        return false;
-    }
-}
+const strictEquality = (numerostrict1,numerostrict2) => numerostrict1 ==  numerostrict2 && numerostrict1 == typeof numerostrict2;
 
-console.log(funcionEstricta("5",5));
+console.log(strictEquality("5",5));
+console.log(strictEquality(5,5));
 
 console.clear();
 // Crea una función que reciba dos strings y devuelva true si tienen la misma longitud y false en caso
 // contrario
 
-function funcionString2(stringEjercicio15,stringEjercicio155){
-    if (stringEjercicio15.length === stringEjercicio155.length){
-        return true;
-    }else {
-        return false;
-    }
-}
+const funcionString2 = (str1, str2) =>  str1.length === str2.length;
+
 console.log(funcionString2("hola buenas tardes","hola buenas"));
 
 console.clear();
@@ -215,14 +206,29 @@ function funcionVacio(stringVacio) {
 }
 console.log(funcionVacio("hola"));
 
+// const isEmpty = function (strEmpty) {
+//     return strEmpty === "" || strEmpty === undefined;
+//      return strEmpty ? true : false;
+// }
+
+// console.log(isEmpty(""));
+// console.log(isEmpty("algo"));
+// console.log(isEmpty());
+console.clear();
+// 17
+
+
+
+
+
+
+
+
 console.clear();
 // Crea una función que reciba un string y un número N y devuelva el string original repetido N veces
 
-function funcionRepetir(stringProfesor,numprofesor,) {
-    for (let index = 0; index < numprofesor; index++) {
-       return stringProfesor;
-        
-    }
+function funcionRepetir(a,b,) {
+    return (a.repeat(b));
 }
 
 console.log("hola buenas",3);
@@ -231,11 +237,13 @@ console.clear();
 //Crea una función que recibe un objeto con dos campos, votos positivos y votos negativos y que devuelva
 // la cuenta final.
 
-function funcionVotos(votosPositivos,votosNegativos) {
-    return "la cuenta final es:", votosPositivos - votosNegativos;
+const funcionVotos = function(obj) {
+    return obj.upVotes - obj.downVotes;
 }
 
-console.log(funcionVotos(30, -15));
+const votes = {upVotes: 35, downVotes: 15};
+
+console.log(funcionVotos(votes));
 
 console.clear();
 // Crea una función que recibe un array de tipos de datos mezclados y que devuelva otro array con el tipo
@@ -267,7 +275,7 @@ console.clear();
 // Crea una función de flecha que devuelva “Positivo” si el número que recibe por argumento es mayor o
 // igual que cero y “Negativo” en caso contrario. Usa el operador ternario.
 
-const ejercicio22 = (num) => { if(num >= 0){return "positivo"} else if(num < 0){return "negativo"}}
+const ejercicio22 = (num) => num >= 0 ? "positivo" : "negativo";
 
 
 // function ejercicio22(num) {
@@ -279,3 +287,24 @@ const ejercicio22 = (num) => { if(num >= 0){return "positivo"} else if(num < 0){
 // }
 
 console.log(ejercicio22(5));
+
+//23
+
+const removeItem = (array, index) => array.splice(index,1);
+
+
+//24
+const filterItem = (array,numberFilter) => {
+
+    array.forEach((element,index) => {
+
+        if (element === numberFilter) {
+            removeItem(array,index);
+         }
+    });
+        
+    
+}
+const arrayFilter = [1,5,6,7,5];
+filterItem(arrayFilter,5);
+console.log(arrayFilter);
