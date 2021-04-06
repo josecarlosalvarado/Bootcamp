@@ -308,3 +308,42 @@ const filterItem = (array,numberFilter) => {
 const arrayFilter = [1,5,6,7,5];
 filterItem(arrayFilter,5);
 console.log(arrayFilter);
+
+//25
+
+function arrayPropiedades(object) {
+    return Object.keys(object);
+    
+}
+
+let clase = {
+    profesor:"Jesus",
+    alumno : "Jose",
+    clase : "2A",
+}
+
+console.log(arrayPropiedades(clase));
+
+const valoresArray = (object) => Object.values(object);
+
+console.log(valoresArray(clase));
+
+//26
+
+function stringInvertido(texto){
+    return texto.split('').reverse().join('');
+}
+
+// 27
+
+function funcionMayus(a,b) {
+    if (a.toLowerCase() === b.toLowerCase()) {
+        return true;
+    }else {
+        return false;
+    }
+    
+}
+
+console.log("carlos","Carlos");
+
