@@ -177,6 +177,15 @@ person2.talk();
 person3.talk();
 person2.talk(this);
 
+//------------------------clonar objetos------------------------
+
+let obj1 = {property: 5};
+let obj2 = obj1; //NO ES UNA COPIA, SI NO EL MISMO OBJETOS CON DOS NOMBRES
+
+obj2 = {...obj1} //copia superficial que se usa practicamente siempre
+
+obj2 = JSON.parse(JSON.stringify(obj1)); //COPIA PROFUNDA O TOTAL
+
 
 //objects contructor using functions  //sin terminar la explicacion del video de codespace
 
@@ -193,22 +202,6 @@ const car3 = new Car("Volvo","red","1","260");
 const car4 = new Car("Fiat","red","1","260");
 
 console.log(car1,car2,car3,car4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -562,3 +555,6 @@ const arr1 = [10,7,13,20];
 let suma = arr1.reduce((suma,item) => suma + item);
 
 console.log(suma);
+
+
+
