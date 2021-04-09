@@ -101,3 +101,18 @@ const parrafoAp9 = document.querySelector("#parrafoap9");
 document.querySelector("#selectap9").addEventListener("change", (e) => {
     parrafoAp9.style.color = e.target.value
 })
+// apartado 10
+
+const currentRandom = document.getElementById("currentRandom");
+const totalNumbers = document.getElementById("totalNumbers");
+const oddNumbers = document.getElementById("oddNumbers");
+const evenNumbers = document.getElementById("evenNumbers");
+
+document.getElementById("randomButton").onclick = () => {
+    const ranndomNumber = Math.floor(Math.random() * 100)
+    currentRandom.textContent = ranndomNumber;
+
+    totalNumbers.textContent++; // totalNumbers.textContent = Number(totalNumbers.textContent) + 1;
+
+    ranndomNumber % 2 === 0 ? evenNumbers.textContent++ : oddNumbers.textContent++;
+}

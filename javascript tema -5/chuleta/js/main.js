@@ -178,6 +178,41 @@ person3.talk();
 person2.talk(this);
 
 
+//objects contructor using functions  //sin terminar la explicacion del video de codespace
+
+function Car(brand,color,weight,topSpeed) {
+    this.brand = brand;
+    this.color = color;
+    this.weight = weight;
+    this.topSpeed = topSpeed;
+}
+
+const car1 = new Car("Mercedes","red","1","260");
+const car2 = new Car("Bmw","red","1","260");
+const car3 = new Car("Volvo","red","1","260");
+const car4 = new Car("Fiat","red","1","260");
+
+console.log(car1,car2,car3,car4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.clear();
 //------------------------arrays------------------------
 
@@ -443,4 +478,87 @@ mainLoop: while (true) {
     }
 }
 
+console.clear();
+//------------------------funciones de alto nivel ------------------------
 
+// misma funcion pero sin map
+let arrayBajoNivel = [1,2,3];
+let arrayBajoNivel2 = [];
+
+for (let num of arraybajoNivel) {
+    arrayAltoNivel2.push(num * 2);
+}
+
+console.log(arrayBajoNivel,arrayBajoNivel2);
+
+
+//map
+
+arrayAltoNivel= [1,2,3];
+//funcion de flecha
+arrayAltoNivel2 = arrayAltoNivel.map(item => item * 2);
+console.log(arrayAltoNivel2);
+
+
+// a partir de una array con años de nacimiento calcular edades 
+
+const cumpleaños = [1980,1990,1974,1970];
+
+edad = cumpleaños.map(num => 2021 - num);
+
+console.log(edad);
+
+// sin filter 
+let prices = [150,50,49,51,15,237];
+let expensiveprice = [];
+
+for (let price of prices) {
+    if (price >= 50) {
+        expensiveprice.push(price);
+    }
+}
+
+console.log(prices,expensiveprice);
+
+//filter 
+
+let prices = [150,50,49,51,15,237];
+
+expensive = prices.filter(price => price >= 50);
+
+console.log(expensive);
+
+//-----------------------------------------
+
+//filter/map con objrto
+const cars = [
+    {
+        brand: "BMW",
+        year: "1990",
+        plateNumber: "1234WER"
+    },
+    {
+        brand: "Mercedes",
+        year: "2021",
+        plateNumber: "4321REW"
+    },
+    {
+        brand: "Volvo",
+        year: "2020",
+        plateNumber: "4431RoW",
+    },
+]
+
+console.log(cars.filter(car => car.year > 2000));
+
+console.log(cars.map(car => car.brand));
+// console.log(cars.map(car => car.address.street));
+cars.sort((car1,car2) => {car1.year - car2.year});
+console.log(cars);
+
+//reduce 
+
+const arr1 = [10,7,13,20];
+let suma = arr1.reduce((suma,item) => suma + item);
+
+console.log(suma);
