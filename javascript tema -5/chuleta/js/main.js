@@ -547,7 +547,7 @@ console.log(cars.filter(car => car.year > 2000));
 console.log(cars.map(car => car.brand));
 // console.log(cars.map(car => car.address.street));
 cars.sort((car1,car2) => {car1.year - car2.year});
-console.log(cars);
+console.log("sort",cars);
 
 //reduce 
 
