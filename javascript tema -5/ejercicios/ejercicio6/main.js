@@ -57,6 +57,7 @@ tbody.onclick = e => {
     }
  };
 
+
  function filtrarTabla() {
      books = books.filter(books => books.title === buscadorInput.value)
      updateTable();
